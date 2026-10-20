@@ -1,0 +1,18 @@
+# EUR-01
+spring:
+  application:
+    name: eureka-server
+
+# EUR-01
+server:
+  port: 8761
+
+eureka:
+  client:
+    # EUR-02: do not register with itself
+    register-with-eureka: false
+    # EUR-02: do not fetch the registry
+    fetch-registry: false
+    service-url:
+      # EUR-02: default zone
+      defaultZone: http://localhost:8761/eureka/
